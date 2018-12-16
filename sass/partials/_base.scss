@@ -1,0 +1,37 @@
+/* Base */
+
+@font-face {
+   font-family: "Open Sans";
+   src: url(./fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+$open-sans: "Open Sans",
+sans-serif;
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+html,
+body {
+   font-size: 16px;
+   font-family: $open-sans;
+   color: $text-color;
+}
+
+a {
+   text-decoration: none;
+   color: $link-color;
+
+   &:hover {
+      color: darken($link-color, 10%);
+   }
+}
+
+.site {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}

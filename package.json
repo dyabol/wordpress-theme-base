@@ -1,0 +1,61 @@
+{
+  "name": "rafthor",
+  "version": "1.0.0",
+  "description": "Wordpress Theme RafThor",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/style.scss ./style.css",
+    "sass-watch": "sass --watch sass:.",
+    "watch": "npm run sass-watch",
+    "server": "browser-sync start --config conf/bs-config.js",
+    "babel": "./node_modules/.bin/babel js/src --out-file js/dist/script.js",
+    "ugly": "uglifyjs js/dist/script.js -o js/dist/script.min.js -c -m --mangle-props --source-map \"filename='script.min.js.map'\"",
+    "build": "npm run babel & npm run ugly & npm run sass",
+    "dev": "npm run server | npm run watch"
+  },
+  "keywords": [
+    "rafthor"
+  ],
+  "author": "Jakub Hromek",
+  "license": "ISC",
+  "browserslist": [
+    "last 4 version"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.7",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gm": "0.0.9",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-real-favicon": "^0.3.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.6",
+    "jshint-stylish": "^2.2.1",
+    "mysqldump": "^2.2.1",
+    "node-sass": "^4.10.0",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "bourbon-neat": "^3.0.0",
+    "file-system": "^2.2.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "mysql": "^2.16.0",
+    "sass-autoprefixer": "^1.0.1"
+  }
+}

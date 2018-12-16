@@ -1,0 +1,11 @@
+   /* Create a step size.*/
+   /* This is the percentage each heading will be reduced by. */
+   $step-size-heading: 0.33333;
+
+   /* The mixin */
+   @mixin heading-size($size) {
+      font-size: $size * $step-size-heading + em;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+   }

@@ -1,0 +1,53 @@
+/* Footer */
+
+.footer {
+   text-align: center;
+   background: $footer-bg-color;
+   color: $footer-text-color;
+   padding: 1em;
+   font-size: 0.9em;
+   width: 100%;
+
+   .socials {
+      img {
+         width: 30px;
+         height: auto;
+         margin: 0.8em 0.4em;
+      }
+   }
+
+   p {
+      margin: 0 0 .8em 0;
+   }
+}
+
+.up-button {
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   z-index: 999;
+   cursor: pointer;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s,
+      opacity 0.5s linear;
+
+   &:hover {
+      background: rgba(0, 0, 0, 0.8);
+   }
+
+   &.show {
+      visibility: visible;
+      opacity: 1;
+   }
+
+   img {
+      height: 36px;
+      width: 36px;
+      margin: 12px;
+   }
+}
